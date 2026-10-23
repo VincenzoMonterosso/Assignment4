@@ -1,4 +1,8 @@
-.app { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
 .grid {
   display: grid;
@@ -6,8 +10,64 @@
   gap: 1rem;
 }
 
-.card img { width: 100%; border-radius: 8px; }
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
 
-.no-poster { aspect-ratio: 2 / 3; display: grid; place-items: center; background: #ddd; border-radius: 8px; }
+.no-poster {
+  aspect-ratio: 2 / 3;
+  display: grid;
+  place-items: center;
+  background: #ddd;
+  border-radius: 8px;
+}
 
-.error { color: crimson; }
+.error {
+  color: crimson;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.empty {
+  padding: 2rem 0;
+}
+
+.load-more {
+  display: block;
+  margin: 2rem auto 0;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  max-width: 500px;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.modal p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

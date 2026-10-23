@@ -1,8 +1,8 @@
 const IMG_BASE = "https://image.tmdb.org/t/p/w342";
 
-export default function MovieCard({ movie }) {
+export default function MovieCard({ movie, onSelect }) {
   return (
-    <article className="card">
+    <article className="card" onClick={() => onSelect(movie)}>
       {movie.poster_path ? (
         <img src={`${IMG_BASE}${movie.poster_path}`} alt={`${movie.title} poster`} />
       ) : (
